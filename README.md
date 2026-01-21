@@ -24,11 +24,13 @@ Seed repository for GitHub Actions CI/CD exercise in CSP451 - Computer Systems P
 ## GitHub Actions CI
 
 This repository includes a GitHub Actions workflow (`.github/workflows/ci.yml`) that automatically runs on:
+
 - Pushes to `main` or `develop`
 - Pull requests to `main`
 - Manual trigger via GitHub UI
 
 The workflow performs:
+
 - Linting (ESLint)
 - Format checking (Prettier)
 - Unit tests (Jest)
@@ -37,6 +39,7 @@ The workflow performs:
 ## Exercise Goals
 
 Students will:
+
 1. Clone and run locally
 2. Implement new features with tests
 3. Push changes and open PRs
