@@ -8,12 +8,7 @@ app.get("/", (req, res) => {
 });
 
 // Health route (Part B requirement)
-app.get("/health", (req, res) => {
-  res.status(200).json({
-    status: "healthy",
-    uptime: process.uptime(),
-  });
-});
+app.get("/health",(req,res)=>{res.status(200).json({status:"healthy",uptime:process.uptime(),});});
 
 module.exports = app;
 
