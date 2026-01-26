@@ -8,3 +8,15 @@ describe("GET /", () => {
     expect(res.body.status).toBe("ok");
   });
 });
+
+test("GET /health returns 200 and healthy status", async () => {
+  const res = await request(app).get("/health");
+  expect(res.statusCode).toBe(200);
+  expect(res.body.status).toBe("healthy");
+});
+
+test("GET /health returns uptime as a number", async () => {
+  const res = await request(app).get("/health");
+  expect(res.body).toHaveProperty("uptime");
+  expect(typeof res.body.uptime).toBe("number");
+});
