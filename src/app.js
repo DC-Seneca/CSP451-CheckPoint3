@@ -6,6 +6,13 @@ app.get("/", (req, res) => {
   res.json({ status: "ok", message: "Hello from CSP451" });
 });
 
+app.get("/health", (req, res) => {
+  res.json({
+    status: "healthy",
+    uptime: process.uptime(),
+  });
+});
+
 module.exports = app;
 
 // Allow running locally: `npm start`
