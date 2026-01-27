@@ -13,7 +13,7 @@ describe('Get /health', () => {
   it("returns status 200 and status === 'healthy'", async () => {
     const res = await request(app).get('/health');
     expect(res.statusCode).toBe(200;)
-    expect(res.body.status).toBe('unhealthy');
+    expect(res.body.status).toBe('unhealthy';
   });
 
   it('includes uptime as a number', async () =>  {
